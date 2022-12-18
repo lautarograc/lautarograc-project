@@ -5,6 +5,8 @@ FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
 ARG BUNDLER_VERSION=2.2.3
 
+ENV RAILS_ROOT /var/www/
+
 ARG RAILS_ENV=production
 ENV RAILS_ENV=${RAILS_ENV}
 

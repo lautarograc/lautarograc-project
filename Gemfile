@@ -32,7 +32,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  # gem 'annotate', '~> 3.1', '>= 3.1.1'
   gem 'brakeman', '~> 5.1', '>= 5.1.1'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'

@@ -17,6 +17,9 @@ services:
     links:
       - db:db
     restart: always
+    volumes:
+      ## Mount the project directory so that the application code is available inside the container
+      - '.:/var/Www'
   redis:
     image: 'redis:7-alpine'
     command: redis-server
