@@ -6,7 +6,7 @@ module Api
         include Api::Concerns::ActAsApiRequest
 
         def resource_params
-          params.require(:user).permit(:email, :password)
+          params.require(:email, :password)
         end
 
         private

@@ -17,8 +17,6 @@ services:
     links:
       - db:db
     restart: always
-    volumes:
-    - "./:/src/rails_api_base"
   redis:
     image: 'redis:7-alpine'
     command: redis-server
@@ -46,15 +44,6 @@ services:
       - db_data:/var/lib/postgresql/data
     ports:
       - 5432:5432
-  worker:
-    build: .
-    entrypoint: "bundle exec rake jobs:work"
-    depends_on:
-      - db
-      - web
-    links:
-      - "db:db"
-    restart: always
   test:
     build: .
     stdin_open: true

@@ -22,7 +22,8 @@ describe 'POST api/v1/users/', type: :request do
 
     it 'returns a successful response' do
       subject
-
+      #put the request sent as a json
+      puts response.body.to_json
       expect(response).to be_successful
     end
 
